@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
@@ -18,28 +22,33 @@
         <h1><i class="fas fa-smile"></i> ChatApp</h1>
         <a href="index.html" class="btn">Leave Room</a>
       </header>
-      <main class="chat-main">
-        <div class="chat-sidebar">
-          <h3><i class="fas fa-comments"></i> Room Name:</h3>
-          <h2 id="room-name"></h2>
-          <h3><i class="fas fa-users"></i> Users</h3>
-          <ul id="users">
-          </ul>
+
+      <div class="row" >
+        <div class="col-lg-3.5" style="overflow-x: scroll;max-height:600px">
+          <div class="chat-sidebar">
+            <h3><i class="fas fa-comments"></i> Room Name:</h3>
+            <h2 id="room-name"></h2>
+            <h3><i class="fas fa-users"></i> Users</h3>
+            <ul id="users" style="padding-left: 5%;">
+            </ul>
+          </div>
         </div>
-        <div class="chat-messages"></div>
-      </main>
-      <div class="chat-form-container">
-        <form id="chat-form">
-          <input
-            id="msg"
-            type="text"
-            placeholder="Enter Message"
-            required
-            autocomplete="off"
-          />
-          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
-        </form>
-      </div>
+
+        <div class="col-lg">
+          <div class="chat-messages">
+          </div>
+
+          <div class="chat-form-container">
+            <form id="chat-form">
+              <input style="margin-right: 3%;width:80%" id="msg" type="text" placeholder="Enter Message" requiredautocomplete="off" />
+              <button class="btn" style="margin-right: 2%;"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+          </div>
+        </div> 
+        
+      </div>  
+
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.3/qs.min.js"
